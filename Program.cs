@@ -1,3 +1,5 @@
+using webapi.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +10,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // builder.Services.AddScoped<IHelloWorldService, HelloworldService>(); // llamando a la inyeccion de dependencia(recomendado)
 builder.Services.AddScoped<IHelloWorldService>(p => new HelloworldService()); // otra manera de inyectar dependencia sin interfaz
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddScoped<ITareasService, TareasServices>();
 
 var app = builder.Build();
 
