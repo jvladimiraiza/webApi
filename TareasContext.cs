@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using projectef.Models;
+using webapi.Models;
 
-namespace projectef;
+namespace webapi;
 public class TareasContext: DbContext
 {
     public DbSet<Categoria> Categorias {get;set;}
