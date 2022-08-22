@@ -19,7 +19,7 @@ public class CategoriaController: ControllerBase
     public IActionResult Post([FromBody] Categoria categoria)
     {
         categoriaService.save(categoria);
-        return Ok("El registro se inserto correctamente");
+        return Ok("El registro se inserto correctamentess");
     }
     [HttpPut("{id}")]
     public IActionResult Put(Guid id, [FromBody] Categoria categoria)
